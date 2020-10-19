@@ -269,43 +269,42 @@ Now, let's use these helper methods to build out our nav bar. If the user is log
 
 ```erb
 <body>
-	<nav>
+   <nav>
       <ul>
-        <% if logged_in? %>
-        	<li>Welcome, <%= current_user.username %></li>
-        	<li><a href="/tweet">Post a Tweet!</a></li>
-        	<li><a href="/logout">Logout</a></li>
-        <% end %>
+         <% if logged_in? %>
+            <li>Welcome, <%= current_user.username %></li>
+            <li><a href="/tweet">Post a Tweet!</a></li>
+            <li><a href="/logout">Logout</a></li>
+         <% end %>
       </ul>
-    </nav>
-	<div class="container">
-	
-	  <h1>Welcome to Fwitter!</h1>
-	  
-	  <%= yield %> 	  
+   </nav>
+   <div class="container">
+      <h1>Welcome to Fwitter!</h1>
+      <%= yield %>
+   </div>
 </body>
 ``` 
+
 If there's no current user, we'll show them a link to either sign up or login.
 
 ```erb
 <body>
-	<nav>
+   <nav>
       <ul>
-        <% if logged_in? %>
-        	<li>Welcome, <%= current_user.username %></li>
-        	<li><a href="/tweet">Post a Tweet!</a></li>
-        	<li><a href="/logout">Logout</a></li>
-        <% else %>
-        	<li><a href="/login">Login</a></li>
-        	<li><a href="/signup">Sign Up</a></li>
-        <% end %>
+         <% if logged_in? %>
+            <li>Welcome, <%= current_user.username %></li>
+            <li><a href="/tweet">Post a Tweet!</a></li>
+            <li><a href="/logout">Logout</a></li>
+         <% else %>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+         <% end %>
       </ul>
-    </nav>
-	<div class="container">
-	
-	  <h1>Welcome to Fwitter!</h1>
-	  
-	  <%= yield %> 	  
+   </nav>
+   <div class="container">
+      <h1>Welcome to Fwitter!</h1>
+      <%= yield %>
+   </div>
 </body>
 ``` 
 
