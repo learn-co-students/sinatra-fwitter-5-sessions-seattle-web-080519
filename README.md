@@ -100,7 +100,7 @@ Let's use that information to find the user in our database.
 
 ```
 
-Here, we'll have two different branches. Either we'll find a user in our database or we won't. If `user` is not equal to nil, we'll log the user in. Othewise, we'll send them to the signup page. In psuedo-code, this looks something like this. 
+Here, we'll have two different branches. Either we'll find a user in our database or we won't. If `user` is not equal to nil, we'll log the user in. Otherwise, we'll send them to the signup page. In pseudo-code, this looks something like this. 
 
 ```ruby
   post '/login' do
